@@ -22,8 +22,8 @@ const Todolist = () => {
             <ul className="flex justify-between">
                 <li>
                     <Link
-                        href="/"
-                        className={`${todoUrl === null ? "active" : ""}`}
+                        href="/?todos=all"
+                        className={`${todoUrl === "all" ? "active" : ""}`}
                     >
                         All
                     </Link>
