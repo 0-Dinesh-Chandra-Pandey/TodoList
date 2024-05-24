@@ -22,7 +22,7 @@ const Todolist = () => {
                 <li>
                     <Link
                         href="/"
-                        className={`${todoUrl === "null" ? "active" : ""}`}
+                        className={`${todoUrl === null ? "active" : ""}`}
                     >
                         All
                     </Link>
