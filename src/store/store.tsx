@@ -29,8 +29,12 @@ export const GlobalContext = createContext<TodosContext | null>(null);
 
 export const ContextProvider = ({ children }: { children: ReactNode }) => {
     const [todos, setTodos] = useState<Todo[]>(() => {
-        const newTodo = localStorage.getItem("todos") || "[]";
-        return JSON.parse(newTodo) as Todo[];
+        if (typeof window !== 'undefined') {
+            const newTodo = localStorage.getItem("todos") || "[]";
+            return JSON.parse(newTodo) as Todo[];
+        } else {
+            return [];
+        }
     });
 
     const handleAddTodo = (value: string) => {
