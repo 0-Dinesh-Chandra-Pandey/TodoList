@@ -14,7 +14,8 @@ const TodoInput = () => {
         handleAddTodo(todoInput);
         setTodoInput('');
     } 
-
+    
+    // TODO INPUT
     return (
         <div className="w-[60%]">
             <form onSubmit={handleSubmit}>
